@@ -5,6 +5,7 @@
     tools:context="com.example.evair.carros.ui.listacarros.ListaCarrosFragment">
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvCarros"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
