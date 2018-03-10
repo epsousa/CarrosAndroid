@@ -7,14 +7,19 @@
     android:layout_height="match_parent"
     tools:context="com.example.evair.carros.ui.main.MainActivity">
 
+    <FrameLayout
+        android:id="@+id/containerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigation" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:background="?android:attr/windowBackground"
         app:menu="@menu/navigation" />
 
