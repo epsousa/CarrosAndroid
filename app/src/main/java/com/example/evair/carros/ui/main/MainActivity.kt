@@ -1,8 +1,9 @@
-package com.example.evair.carros
+package com.example.evair.carros.ui.main
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import com.example.evair.carros.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
