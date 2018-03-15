@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#FFF"
+    android:visibility="gone"
+    android:id="@+id/containerErro"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.CircleImageView
+        android:layout_width="wrap_content"
+        android:layout_height="128dp"
+        android:src="@drawable/errow" />
+
+    <TextView
+        android:id="@+id/tvMensagemErro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Tenta denovo"
+        android:textSize="25dp" />
+
+
+</LinearLayout>

@@ -7,10 +7,10 @@ object RetrofitClient {
 
     private var retrofit: Retrofit? = null
 
-    fun getInstance(baseUrl: String): Retrofit {
+    fun getInstance(): Retrofit {
         if (retrofit == null) {
             retrofit = Retrofit.Builder()
-                    .baseUrl(baseUrl)
+                    .baseUrl("https://carroapis.herokuapp.com/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
         }
