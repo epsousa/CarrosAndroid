@@ -30,8 +30,11 @@ class ListaCarrosFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        carregarDados()
         return inflater!!.inflate(R.layout.fragment_lista_carros, container, false)
+    }
+
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        carregarDados()
     }
 
     fun carregarDados() {
