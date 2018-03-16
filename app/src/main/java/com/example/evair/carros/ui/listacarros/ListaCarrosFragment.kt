@@ -52,7 +52,7 @@ class ListaCarrosFragment : Fragment() {
                     setupLista(response?.body())
                 } else {
                     containerErro.visibility = View.VISIBLE
-                    tvMensagemErro.text = response?.errorBody().toString()
+                    tvMensagemErro.text = response?.errorBody()?.charStream()?.readText()
                 }
 
                 loading.visibility = View.GONE
