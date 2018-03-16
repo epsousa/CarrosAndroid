@@ -12,6 +12,7 @@ import android.widget.Toast
 import com.example.evair.carros.R
 import com.example.evair.carros.api.CarroAPI
 import com.example.evair.carros.api.RetrofitClient
+import com.example.evair.carros.model.Carro
 import kotlinx.android.synthetic.main.fragment_novo_carro.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -35,9 +36,20 @@ class NovoCarroFragment : Fragment() {
         btSalvar.setOnClickListener {
             val api = RetrofitClient.getInstance().create(CarroAPI::class.java)
 
-            api.salvar().enqueue(object : Callback<Void> {
-                override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
+            val carro = Carro(null,
+                    inputMarca?.editText?.text.toString(),
+                    inputModelo?.editText?.text.toString(),
+                    inputAno.editText?.text.toString().toInt(),
+                    inputPlaca.editText?.text.toString(),
+                    null)
 
+            api.salvar(carro).enqueue(object : Callback<Void> {
+                override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
+                    if (response?.isSuccessful == true) {
+
+                    } else {
+
+                    }
                 }
 
                 override fun onFailure(call: Call<Void>?, t: Throwable?) {
