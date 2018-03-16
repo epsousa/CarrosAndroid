@@ -46,9 +46,9 @@ class NovoCarroFragment : Fragment() {
             api.salvar(carro).enqueue(object : Callback<Void> {
                 override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
                     if (response?.isSuccessful == true) {
-
+                        Toast.makeText(context, "Sucesso", Toast.LENGTH_SHORT).show()
                     } else {
-
+                        Toast.makeText(context, "Errou fausto", Toast.LENGTH_SHORT).show()
                     }
                 }
 
