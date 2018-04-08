@@ -11,8 +11,11 @@ import android.widget.Toast
 
 import com.example.evair.carros.R
 import com.example.evair.carros.api.CarroAPI
+import com.example.evair.carros.api.ProdutoApi
 import com.example.evair.carros.api.RetrofitClient
 import com.example.evair.carros.model.Carro
+import com.example.evair.carros.model.Produto
+import com.example.evair.carros.ui.novocarro.NovoCarroFragment
 import kotlinx.android.synthetic.main.erro.*
 import kotlinx.android.synthetic.main.fragment_lista_carros.*
 import kotlinx.android.synthetic.main.loading.*
@@ -38,12 +41,12 @@ class ListaCarrosFragment : Fragment() {
     }
 
     fun carregarDados() {
-        val api = RetrofitClient.getInstance().create(CarroAPI::class.java)
+        val api = RetrofitClient.getInstance().create(ProdutoApi::class.java)
 
         loading.visibility = View.VISIBLE
 
-        api.buscarTodos().enqueue(object : Callback<List<Carro>> {
-            override fun onResponse(call: Call<List<Carro>>?, response: Response<List<Carro>>?) {
+        api.getAll().enqueue(object : Callback<List<Produto>> {
+            override fun onResponse(call: Call<List<Produto>>?, response: Response<List<Produto>>?) {
 
                 containerErro.visibility = View.GONE
                 tvMensagemErro.text = ""
@@ -58,7 +61,7 @@ class ListaCarrosFragment : Fragment() {
                 loading.visibility = View.GONE
             }
 
-            override fun onFailure(call: Call<List<Carro>>?, t: Throwable?) {
+            override fun onFailure(call: Call<List<Produto>>?, t: Throwable?) {
                 containerErro.visibility = View.VISIBLE
                 tvMensagemErro.text = t?.message
                 loading.visibility = View.GONE
@@ -67,7 +70,7 @@ class ListaCarrosFragment : Fragment() {
         })
     }
 
-    fun setupLista(carros: List<Carro>?) {
+    fun setupLista(carros: List<Produto>?) {
         carros.let {
             rvCarros.adapter = ListaCarrosAdapter(carros!!, context)
             val layoutManager = LinearLayoutManager(context)

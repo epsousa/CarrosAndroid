@@ -22,7 +22,12 @@
         </activity>
         <activity
             android:name=".ui.main.MainActivity"
-            android:label="@string/title_activity_main"></activity>
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".CadastroActivity"></activity>
     </application>
 
 </manifest>

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Carros.iml" filepath="$PROJECT_DIR$/Carros.iml" />
       <module fileurl="file://C:\Users\logonrm\Desktop\Android\CarrosAndroid\Carros.iml" filepath="C:\Users\logonrm\Desktop\Android\CarrosAndroid\Carros.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CarrosAndroid.iml" filepath="$PROJECT_DIR$/CarrosAndroid.iml" />
+      <module fileurl="file://C:\Users\evair\AndroidStudioProjects\Carros\CarrosAndroid.iml" filepath="C:\Users\evair\AndroidStudioProjects\Carros\CarrosAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://C:\Users\logonrm\Desktop\Android\CarrosAndroid\app\app.iml" filepath="C:\Users\logonrm\Desktop\Android\CarrosAndroid\app\app.iml" />
     </modules>
