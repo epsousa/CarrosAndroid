@@ -36,4 +36,6 @@
     <string name="deletado">Deleted with success!</string>
     <string name="erroemail">Email or Passwords is wrong</string>
     <string name="senhasdiferentes">Password are not equals</string>
+    <string name="search">Search</string>
+    <string name="notFoundProducts">Products not found</string>
 </resources>

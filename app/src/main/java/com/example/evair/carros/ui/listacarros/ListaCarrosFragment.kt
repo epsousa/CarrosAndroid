@@ -71,11 +71,16 @@ class ListaCarrosFragment : Fragment() {
     }
 
     fun setupLista(carros: List<Produto>?) {
-        carros.let {
-            rvCarros.adapter = ListaCarrosAdapter(carros!!, context)
-            val layoutManager = LinearLayoutManager(context)
-            rvCarros.layoutManager = layoutManager
+
+        if(carros!!.isNotEmpty()) {
+            carros.let {
+                rvCarros.adapter = ListaCarrosAdapter(carros!!, context)
+                val layoutManager = LinearLayoutManager(context)
+                rvCarros.layoutManager = layoutManager
+            }
+        } else {
+            Toast.makeText(this.context, R.string.notFoundProducts, Toast.LENGTH_SHORT).show()
         }
     }
 
-}// Required empty public constructor
+}

@@ -36,4 +36,6 @@
     <string name="deletado">Deletado com sucesso!</string>
     <string name="erroemail">Email ou Senha incorretos</string>
     <string name="senhasdiferentes">Senhas diferentes</string>
+    <string name="search">Pesquisar</string>
+    <string name="notFoundProducts">Produtos não encontrados</string>
 </resources>
