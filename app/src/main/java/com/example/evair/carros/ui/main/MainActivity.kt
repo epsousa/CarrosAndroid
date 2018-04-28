@@ -1,12 +1,14 @@
 package com.example.evair.carros.ui.main
 
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
 import android.support.design.widget.BottomNavigationView.OnNavigationItemSelectedListener
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
-import android.widget.Toast
+import com.example.evair.carros.LoginActivity
 import com.example.evair.carros.R
+import com.example.evair.carros.fragment_sobre
 import com.example.evair.carros.ui.listacarros.ListaCarrosFragment
 import com.example.evair.carros.ui.novocarro.NovoCarroFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,8 +26,18 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_sobre -> {
-                Toast.makeText(this, "Em construção, boa sorte champs!", Toast.LENGTH_LONG).show()
+                changeFragment(fragment_sobre())
                 return@OnNavigationItemSelectedListener true
+            }
+            R.id.loggout -> {
+                var prefs: SharedPreferences? = applicationContext.getSharedPreferences("LOGIN",0);
+                try {
+                    prefs?.edit()?.putBoolean("MENTER_LOGADO", false)?.commit()
+                    val k = Intent(this@MainActivity, LoginActivity::class.java)
+                    startActivity(k)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
             }
         }
         false

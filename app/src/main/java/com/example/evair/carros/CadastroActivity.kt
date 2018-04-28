@@ -25,7 +25,7 @@ class CadastroActivity : AppCompatActivity() {
             val api = RetrofitClient.getInstance().create(LoginApi::class.java)
 
             if(!validarDados()){
-                Toast.makeText(applicationContext, "Preencher todos os campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.preencher, Toast.LENGTH_SHORT).show()
             } else if(inputSenha1?.editText?.text.toString().equals(inputSenha2?.editText?.text.toString())) {
 
 
@@ -33,7 +33,7 @@ class CadastroActivity : AppCompatActivity() {
                 api.salvar(login).enqueue(object : Callback<Void> {
                     override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
                         if (response?.isSuccessful == true) {
-                            Toast.makeText(applicationContext, "Cadastrado com sucesso!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, R.string.cadastrado, Toast.LENGTH_SHORT).show()
                             try {
                                 val k = Intent(this@CadastroActivity, LoginActivity::class.java)
                                 startActivity(k)
@@ -41,18 +41,18 @@ class CadastroActivity : AppCompatActivity() {
                                 e.printStackTrace()
                             }
                         } else {
-                            Toast.makeText(applicationContext, "Erro na API", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, R.string.erroapi, Toast.LENGTH_SHORT).show()
                         }
                     }
 
                     override fun onFailure(call: Call<Void>?, t: Throwable?) {
-                        Log.e("CARRO", t?.message)
+                        Log.e("PRODUTO", t?.message)
                         Toast.makeText(applicationContext, t?.message, Toast.LENGTH_SHORT).show()
                     }
 
                 })
             } else {
-                Toast.makeText(applicationContext, "Senhas diferentes", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.senhasdiferentes, Toast.LENGTH_SHORT).show()
             }
         }
     }

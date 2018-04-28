@@ -14,4 +14,17 @@
         android:layout_centerInParent="true"
         android:src="@drawable/bag" />
 
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivLogoSplash"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:ems="13"
+        android:inputType="textPersonName"
+        android:text="Master Products"
+        android:textAlignment="center" />
+
+
 </RelativeLayout>

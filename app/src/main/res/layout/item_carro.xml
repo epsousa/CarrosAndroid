@@ -11,15 +11,15 @@
         android:layout_height="200dp" />
 
     <TextView
-        android:id="@+id/tvModelo"
+        android:id="@+id/tvNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Modelo" />
+        tools:text="@string/nomeProduto" />
 
     <TextView
-        android:id="@+id/tvMarca"
+        android:id="@+id/tvCategoria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Marca" />
+        tools:text="@string/categoria" />
 
 </LinearLayout>

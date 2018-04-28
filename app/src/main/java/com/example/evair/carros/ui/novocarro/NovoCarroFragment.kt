@@ -40,7 +40,6 @@ class NovoCarroFragment : Fragment() {
         if(!produto.id.isNullOrEmpty()){
             inputNomeProd?.editText?.setText(produto.nome)
             inputCategoriaProd?.editText?.setText(produto.categoria)
-            //inputPrecoProd?.editText?.
             inputImagemProd?.editText?.setText(produto.urlImagem)
             btnDeletar.visibility = View.VISIBLE
         } else {
@@ -61,15 +60,15 @@ class NovoCarroFragment : Fragment() {
                 api.salvar(carro).enqueue(object : Callback<Void> {
                     override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
                         if (response?.isSuccessful == true) {
-                            Toast.makeText(context, "Cadastrado com sucesso", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, R.string.cadastrado, Toast.LENGTH_SHORT).show()
                             limparCampos()
                         } else {
-                            Toast.makeText(context, "Errou fausto", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, R.string.erroapi, Toast.LENGTH_SHORT).show()
                         }
                     }
 
                     override fun onFailure(call: Call<Void>?, t: Throwable?) {
-                        Log.e("CARRO", t?.message)
+                        Log.e("Produto", t?.message)
                     }
 
                 })
@@ -83,17 +82,17 @@ class NovoCarroFragment : Fragment() {
                 api.update(carro).enqueue(object : Callback<Void> {
                     override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
                         if (response?.isSuccessful == true) {
-                            Toast.makeText(context, "Alterado com sucesso", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, R.string.alterado, Toast.LENGTH_SHORT).show()
                             limparCampos()
                             var activity = context as MainActivity
                             activity.changeFragment(ListaCarrosFragment())
                         } else {
-                            Toast.makeText(context, "Errou fausto", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, R.string.erroapi, Toast.LENGTH_SHORT).show()
                         }
                     }
 
                     override fun onFailure(call: Call<Void>?, t: Throwable?) {
-                        Log.e("CARRO", t?.message)
+                        Log.e("Produto", t?.message)
                     }
 
                 })
@@ -107,12 +106,12 @@ class NovoCarroFragment : Fragment() {
                 api.delete(produto.id!!).enqueue(object : Callback<Void> {
                     override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
                         if (response?.isSuccessful == true) {
-                            Toast.makeText(context, "Deletado com sucesso", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, R.string.deletado, Toast.LENGTH_SHORT).show()
                             limparCampos()
                             var activity = context as MainActivity
                             activity.changeFragment(ListaCarrosFragment())
                         } else {
-                            Toast.makeText(context, "Errou fausto", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, R.string.erroapi, Toast.LENGTH_SHORT).show()
                         }
                     }
 

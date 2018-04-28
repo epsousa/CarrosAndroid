@@ -22,7 +22,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nome Produto" />
+                    android:hint="@string/nomeProduto" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -33,7 +33,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Categoria Produto" />
+                    android:hint="@string/categoria" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -44,7 +44,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Preco Inteiro"
+                    android:hint="@string/preco"
                     android:inputType="number"/>
             </android.support.design.widget.TextInputLayout>
 
@@ -56,7 +56,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Imagem Link"
+                    android:hint="@string/imagem"
                     android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
@@ -64,7 +64,7 @@
                 android:id="@+id/btnDeletar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Deletar Produto"/>
+                android:text="@string/deletar"/>
 
         </LinearLayout>
 

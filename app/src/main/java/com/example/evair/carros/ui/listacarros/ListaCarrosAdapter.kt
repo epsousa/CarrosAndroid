@@ -47,8 +47,8 @@ class ListaCarrosAdapter(private val carros: List<Produto>, private val context:
                 frag.produto = carro
                 activity.changeFragment(frag)
             }
-            itemView.tvMarca.text = carro.nome
-            itemView.tvModelo.text = carro.categoria
+            itemView.tvNome.text = carro.nome
+            itemView.tvCategoria.text = carro.categoria
             if(!carro.urlImagem.isNullOrEmpty()) {
                 Picasso.get().load(carro.urlImagem).placeholder(R.drawable.bag).error(R.drawable.erro).into(itemView.ivFoto);
             } else {
