@@ -1,4 +1,4 @@
-package com.example.evair.carros.ui.main
+package com.example.evair.produtos.ui.main
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -6,11 +6,11 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView.OnNavigationItemSelectedListener
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
-import com.example.evair.carros.LoginActivity
-import com.example.evair.carros.R
-import com.example.evair.carros.fragment_sobre
-import com.example.evair.carros.ui.listacarros.ListaCarrosFragment
-import com.example.evair.carros.ui.novocarro.NovoCarroFragment
+import com.example.evair.produtos.LoginActivity
+import com.example.evair.produtos.R
+import com.example.evair.produtos.fragment_sobre
+import com.example.evair.produtos.ui.listaprodutos.ListaProdutosFragment
+import com.example.evair.produtos.ui.novoproduto.NovoProdutoFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,11 +18,11 @@ class MainActivity : AppCompatActivity() {
     private val mOnNavigationItemSelectedListener = OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_lista -> {
-                changeFragment(ListaCarrosFragment())
+                changeFragment(ListaProdutosFragment())
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_novo -> {
-                changeFragment(NovoCarroFragment())
+                changeFragment(NovoProdutoFragment())
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_sobre -> {
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
-        changeFragment(ListaCarrosFragment())
+        changeFragment(ListaProdutosFragment())
 
     }
 

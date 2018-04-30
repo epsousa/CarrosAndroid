@@ -9,7 +9,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_login">Login</string>
     <string name="nome">Nome</string>
-    <string name="email">E-mail</string>
+    <string name="email">E-mail: exemplo@exemplo.com</string>
     <string name="senha">Senha</string>
     <string name="confirmPass">Confirme sua senha</string>
     <string name="Cadastrar">Cadastrar</string>
@@ -19,9 +19,9 @@
     <string name="tenteDenovo">Tente novamente</string>
     <string name="devname">Nome do desenvolvedor: Evair Pereira Sousa</string>
     <string name="version">Versão: 1.0.0</string>
-    <string name="nomeProduto">Nome do Produto</string>
-    <string name="categoria">Categoria do produto</string>
-    <string name="preco">Preço inteiro</string>
+    <string name="nomeProduto">Nome do Produto *</string>
+    <string name="categoria">Categoria do produto *</string>
+    <string name="preco">Preço *</string>
     <string name="imagem">Imagem Link</string>
     <string name="deletar">Deletar Produto</string>
     <string name="loading">Carregando...</string>
@@ -38,4 +38,6 @@
     <string name="senhasdiferentes">Senhas diferentes</string>
     <string name="search">Pesquisar</string>
     <string name="notFoundProducts">Produtos não encontrados</string>
+    <string name="corrigirEmail">e-mail deve estar no padrão: example@example.com</string>
+    <string name="preencherProduto">Campos com * são necessários</string>
 </resources>

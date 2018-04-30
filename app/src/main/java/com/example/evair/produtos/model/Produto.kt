@@ -1,4 +1,4 @@
-package com.example.evair.carros.model
+package com.example.evair.produtos.model
 
 /**
  * Created by evair on 07/04/2018.
@@ -6,7 +6,7 @@ package com.example.evair.carros.model
 data class Produto(var id: String?,
                    var nome: String,
                    var categoria: String,
-                   var preco: Int,
+                   var preco: Double,
                    var urlImagem: String?) {
 
 //    constructor():this("","", "", 0, "")

@@ -1,4 +1,4 @@
-package com.example.evair.carros.ui.splash
+package com.example.evair.produtos.ui.splash
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -7,13 +7,12 @@ import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import android.view.animation.AnimationUtils
-import android.widget.Toast
-import com.example.evair.carros.LoginActivity
-import com.example.evair.carros.R
-import com.example.evair.carros.api.LoginApi
-import com.example.evair.carros.api.RetrofitClient
-import com.example.evair.carros.model.Login
-import com.example.evair.carros.ui.main.MainActivity
+import com.example.evair.produtos.LoginActivity
+import com.example.evair.produtos.R
+import com.example.evair.produtos.api.LoginApi
+import com.example.evair.produtos.api.RetrofitClient
+import com.example.evair.produtos.model.Login
+import com.example.evair.produtos.ui.main.MainActivity
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_splash.*
 import retrofit2.Call
@@ -60,7 +59,7 @@ class SplashActivity : AppCompatActivity() {
                         }
                     }
                     override fun onFailure(call: Call<Login>?, t: Throwable?) {
-                        Log.e("CARRO", t?.message)
+                        Log.e("Produto", t?.message)
                         Handler().postDelayed({
                             prefs.edit().putBoolean("MENTER_LOGADO", false).commit()
                             val k = Intent(this@SplashActivity, LoginActivity::class.java)

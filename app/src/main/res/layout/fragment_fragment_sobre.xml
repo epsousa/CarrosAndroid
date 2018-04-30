@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.evair.carros.fragment_sobre">
+    tools:context="com.example.evair.produtos.fragment_sobre">
 
     <LinearLayout
         android:orientation="vertical"

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.evair.carros.ui.listacarros.ListaCarrosFragment">
+    tools:context="com.example.evair.produtos.ui.listaprodutos.ListaProdutosFragment">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -13,7 +13,7 @@
                 android:layout_height="wrap_content">
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/inputNomeProd"
+                    android:id="@+id/inputNomeProdSearch"
                     android:layout_width="220dp"
                     android:layout_height="wrap_content">
 
@@ -25,7 +25,7 @@
                 </android.support.design.widget.TextInputLayout>
 
                 <Button
-                    android:id="@+id/btnDeletar"
+                    android:id="@+id/btnSearch"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -35,7 +35,7 @@
             </RelativeLayout>
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/rvCarros"
+                android:id="@+id/rvProdutos"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 

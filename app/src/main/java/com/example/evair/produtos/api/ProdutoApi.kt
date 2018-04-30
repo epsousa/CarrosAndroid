@@ -1,7 +1,6 @@
-package com.example.evair.carros.api
+package com.example.evair.produtos.api
 
-import com.example.evair.carros.model.Login
-import com.example.evair.carros.model.Produto
+import com.example.evair.produtos.model.Produto
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -12,6 +11,9 @@ interface ProdutoApi {
 
     @GET("/produto")
     fun getAll(): Call<List<Produto>>
+
+    @GET("/produto/{nome}/aproximado")
+    fun getContaining(@Path("nome") id: String): Call<List<Produto>>
 
     @POST("/produto")
     fun salvar(@Body produto: Produto): Call<Void>

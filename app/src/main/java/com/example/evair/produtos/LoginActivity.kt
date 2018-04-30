@@ -1,12 +1,12 @@
-package com.example.evair.carros
+package com.example.evair.produtos
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Toast
-import com.example.evair.carros.api.LoginApi
-import com.example.evair.carros.api.RetrofitClient
-import com.example.evair.carros.model.Login
+import com.example.evair.produtos.api.LoginApi
+import com.example.evair.produtos.api.RetrofitClient
+import com.example.evair.produtos.model.Login
 
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
@@ -14,7 +14,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import android.content.Intent
 import android.content.SharedPreferences
-import com.example.evair.carros.ui.main.MainActivity
+import com.example.evair.produtos.ui.main.MainActivity
 
 
 class LoginActivity : AppCompatActivity() {

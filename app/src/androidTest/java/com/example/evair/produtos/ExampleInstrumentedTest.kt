@@ -1,4 +1,4 @@
-package com.example.evair.carros
+package com.example.evair.produtos
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.example.evair.carros", appContext.packageName)
+        assertEquals("com.example.evair.produtos", appContext.packageName)
     }
 }

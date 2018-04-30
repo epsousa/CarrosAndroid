@@ -31,7 +31,7 @@
         tools:text="@string/nomeProduto" />
 
     <TextView
-        android:id="@+id/tvCategoria"
+        android:id="@+id/tvPreco"
         android:layout_width="210dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"

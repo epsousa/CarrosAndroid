@@ -1,16 +1,14 @@
-package com.example.evair.carros
+package com.example.evair.produtos
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.example.evair.carros.api.LoginApi
-import com.example.evair.carros.api.RetrofitClient
-import com.example.evair.carros.model.Login
-import com.example.evair.carros.ui.main.MainActivity
+import com.example.evair.produtos.api.LoginApi
+import com.example.evair.produtos.api.RetrofitClient
+import com.example.evair.produtos.model.Login
 import kotlinx.android.synthetic.main.activity_cadastro.*
-import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -25,7 +23,11 @@ class CadastroActivity : AppCompatActivity() {
             val api = RetrofitClient.getInstance().create(LoginApi::class.java)
 
             if(!validarDados()){
-                Toast.makeText(applicationContext, R.string.preencher, Toast.LENGTH_SHORT).show()
+                if(inputEmailCad?.editText?.text.toString().isNullOrEmpty()){
+                    Toast.makeText(applicationContext, R.string.preencher, Toast.LENGTH_SHORT).show()
+                } else if (!inputEmailCad?.editText?.text.toString().contains(Regex("(\\w+@\\w+\\.\\w+)(\\.\\w+)?"))) {
+                    Toast.makeText(applicationContext, R.string.corrigirEmail, Toast.LENGTH_SHORT).show()
+                }
             } else if(inputSenha1?.editText?.text.toString().equals(inputSenha2?.editText?.text.toString())) {
 
 
@@ -59,19 +61,22 @@ class CadastroActivity : AppCompatActivity() {
 
     fun validarDados(): Boolean{
         var retorno = true
-        if(inputNomeCad?.editText?.text.toString() == null || inputNomeCad?.editText?.text.toString().equals("")){
+
+        if(inputNomeCad?.editText?.text.toString().isNullOrEmpty()){
             retorno = false
         }
 
-        if(inputEmailCad?.editText?.text.toString() == null || inputNomeCad?.editText?.text.toString().equals("")){
+        if(inputEmailCad?.editText?.text.toString().isNullOrEmpty()){
+            retorno = false
+        } else if (!inputEmailCad?.editText?.text.toString().contains(Regex("(\\w+@\\w+\\.\\w+)(\\.\\w+)?"))) {
             retorno = false
         }
 
-        if(inputSenha1?.editText?.text.toString() == null || inputNomeCad?.editText?.text.toString().equals("")){
+        if(inputSenha1?.editText?.text.toString().isNullOrEmpty()){
             retorno = false
         }
 
-        if(inputSenha2?.editText?.text.toString() == null || inputNomeCad?.editText?.text.toString().equals("")){
+        if(inputSenha2?.editText?.text.toString().isNullOrEmpty()){
             retorno = false
         }
 

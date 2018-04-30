@@ -1,4 +1,4 @@
-package com.example.evair.carros.model
+package com.example.evair.produtos.model
 
 /**
  * Created by evair on 07/04/2018.
